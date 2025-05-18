@@ -8,11 +8,6 @@
     scroll-behavior: smooth;
     list-style: none;
 }
-body {
-    overflow-x: hidden; /* 👉 Хажуу гүйлгэлтийг хориглоно */
-}
-
-/* 🧹 Scrollbar-ийг нуух */
 
 header{
     position: fixed;
@@ -429,4 +424,3 @@ footer ul li a {
         gap: 1rem;
     }
 }
-

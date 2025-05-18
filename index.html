@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"><span>Amarzaya</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <button class="visit-btn">Visit Github</button>
+        </ul>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="img.jpg" alt="">
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi I'm</h3>
+                    <h1 id="editableName" class="editable">Amarzaya</h1>
+                    <span id="editableRole" class="editable">Frontend Developer</span>
+                </div>
+                <div class="btn-group">
+                    <div class="btn">Download</div>
+                    <div class="btn">Contact</div>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/WebDesignMastery/WDM-Co_07-07-23">
+                        <i class="fa-brands fa-github"></i></a>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span class="editable">Software engineer</span>
+                    <h3 class="editable">4 жилийн турш</h3>
+                    <p class="editable">Анх 2022 оны 9 сарын 1 нд 'Их засаг олон улсын их сургуульд' КПХ буюу software engineer ээр эслэн орсон</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span class="editable">Graphic design</span>
+                    <h3 class="editable">1 жилийн турш</h3>
+                    <p class="editable">dfsdfsdfs</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span class="editable">System design</span>
+                    <h3 class="editable">9 сарын турш</h3>
+                    <p class="editable">dfsdfsdfs</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-list"></i>
+                    <span class="editable">Content manager</span>
+                    <h3 class="editable">3 сарын турш</h3>
+                    <p class="editable">dfsdfsdfs</p>
+                </div>
+            </div>
+            <img src="img.jpg" alt="">
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <h2 class="section-title">Recent project</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project.png" alt="">
+                <h3 class="editable">Project X</h3>
+                <p class="editable">sdgdsgdfgdf</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.png" alt="">
+                <h3 class="editable">Project Y</h3>
+                <p class="editable">sdgdsgdfgdf</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project.png" alt="">
+                <h3 class="editable">Project Z</h3>
+                <p class="editable">sdgdsgdfgdf</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="input">
+                <input type="text" placeholder="example@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="btn">Submit</div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">©️ All Right Reserved / Amarzaya</p>
+    </footer>
+
+    <!-- Admin Login Popup -->
+    <div id="adminLoginPopup" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%);
+     background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 15px rgba(0,0,0,0.3); z-index:1000;">
+        <h3>Админ нэвтрэх</h3>
+        <input type="password" id="adminPassword" placeholder="Нууц үг" style="padding:8px; margin:10px 0; width:100%;">
+        <button onclick="handleLogin()">Нэвтрэх</button>
+        <p id="loginError" style="color:red; margin-top:10px;"></p>
+    </div>
+
+    <!-- Admin Login Button -->
+    <button id="adminBtn" style="position:fixed; bottom:20px; right:20px; z-index:999;">🔒 Admin нэвтрэх</button>
+
+    <div id="admin-controls" style="display:none; position:fixed; bottom:80px; right:20px; z-index:1000;">
+      <button id="saveBtn" style="margin: 5px; padding: 8px 12px;">💾 Хадгалах</button>
+      <button id="logoutBtn" style="margin: 5px; padding: 8px 12px;">🚪 Гарах</button>
+  </div>
+
+    <script src="script.js"></script>
+    <div id="admin-controls" style="display:none; position:fixed; bottom:80px; right:20px; z-index:1000;">
+      
+  </div>
+  
+</body>
+</html>
